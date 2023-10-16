@@ -40,7 +40,7 @@ param(
 )
 
 # Define the installation path for VSCode
-$codePath = "C:\Users\jgariepy\AppData\Local\Programs\"
+$codePath = $env:USERPROFILE + "\AppData\Local\Programs\"
 
 try {
     $ProgressPreference = 'SilentlyContinue'

@@ -22,7 +22,7 @@ param(
 )
 
 # Installation path for VSCode
-$codePath = "C:\Users\jgariepy\AppData\Local\Programs\"
+$codePath = $env:USERPROFILE + "\AppData\Local\Programs\"
 
 # Determine bit version based on architecture
 $bitVersion = if ($Architecture -eq "64-bit") { "win32-x64" } else { "win32-x86" }
