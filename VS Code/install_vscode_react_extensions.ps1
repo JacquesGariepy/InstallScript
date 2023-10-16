@@ -59,7 +59,7 @@ try {
         "ms-vscode.vscode-typescript-tslint-plugin" # TSLint (deprecated, but some projects might still use it)
     )
 
-    $codeCmdPath = "C:\Users\$env:USERNAME\AppData\Local\Programs\Microsoft VS Code\bin\code.cmd"
+    $codeCmdPath = $env:USERPROFILE + \AppData\Local\Programs\Microsoft VS Code\bin\code.cmd"
     foreach ($extension in $vsCodeExtensions) {
         Write-Host "Installing VS Code extension: $extension" -ForegroundColor Yellow
         & $codeCmdPath --install-extension $extension
